@@ -66,7 +66,7 @@ def chat(image_path, prompt, api_key):
 st.title('Image Classification Tool')
 
 uploaded_file = st.file_uploader("Upload a ZIP file containing images", type=['zip'])
-api_key = 'sk-proj-D9m20mQRP06YvS2TseMxT3BlbkFJ2CmpxvgYmrsR3bmAFN2E'
+api_key = st.secrets['api_key']
 prompt=f"""You will receive an image, and your job is to classify it into one of the following categories based solely on its content. After analyzing the image, return only the name of the category to which it belongs. Ensure your response is concise, providing only the class name.
 Categories:
 Site ID: Images that contains the site id number, often used for identification and documentation purposes.
